@@ -17,3 +17,7 @@ dist/
 build/
 .env
 .DS_Store
+
+# Graphic project files
+*.piskel
+*.psd
