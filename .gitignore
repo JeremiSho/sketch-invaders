@@ -1,0 +1,19 @@
+# Virtual Python environment
+.venv/
+venv/
+ENV/
+
+# SQLite database and cache migrations
+*.sqlite3
+db.sqlite3
+
+# Python files and cache
+__pycache__/
+*.py[cod]
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.env
+.DS_Store
