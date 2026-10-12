@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "npm run check && esbuild src/main.ts --bundle --outfile=../static/js/main.js --sourcemap",
+    "watch": "esbuild src/main.ts --bundle --outfile=../static/js/main.js --watch --sourcemap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3"
+  }
+}
