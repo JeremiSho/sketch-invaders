@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="menu-header">
+        <h2>Level Select</h2>
+        <div>
+            Logged in as: <strong>{{ user.username }}</strong>
+            <a href="{% url 'logout' %}">Log out</a>
+        </div>
+    </div>
+
+    <div class="level-list">
+        {% for level in levels %}
+        <div class="level-row">
+            <div>
+                <h3 class="level-row-text">Level {{ level.number }}: {{ level.name }}</h3>
+                <p class="level-row-text">{{ level.description }}</p>
+                <p class="level-row-score">Personal Best: <strong>{{ level.best_score }}</strong></p>
+            </div>
+            <a href="{% url 'game' level.number %}" class="btn-link">Play</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
